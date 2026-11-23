@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
     <main>
@@ -6,6 +8,7 @@ export default function AboutPage() {
         This course covers the fundamentals of building modern web applications
         with Next.js, including routing, styling, API routes, and rendering.
       </p>
+      <Link href="/">Back to Home</Link>
     </main>
   );
 }
