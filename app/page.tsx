@@ -1,12 +1,14 @@
 import Link from "next/link";
 import styles from "./home/home.module.css";
 import Navigation from "./components/Navigation";
+import Title from "./components/Title";
 
 export default function Home() {
   return (
     <div>
       <Navigation />
       <main className={styles.container}>
+        <Title />
         <h1 className={styles.title}>Sally&apos;s Next.js Portfolio</h1>
         <p className={styles.description}>
           Welcome to my Next.js application! I built this site to practice
