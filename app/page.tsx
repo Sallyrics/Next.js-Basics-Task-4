@@ -6,6 +6,7 @@ import Button from "./components/Button";
 import Card from "./components/Card";
 import AppLayout from "./components/AppLayout";
 import Alert from "./components/Alert";
+import ProfileCard from "./components/ProfileCard";
 
 export default function Home() {
   return (
@@ -23,6 +24,21 @@ export default function Home() {
           Go to About Page
         </Link>
         <Button />
+
+        <ProfileCard
+          name="Sally"
+          role="Next.js Developer"
+          bio="Building modern web apps with React and Next.js."
+          bgColor="#1e3a8a"
+          accentColor="#60a5fa"
+        />
+        <ProfileCard
+          name="David"
+          role="UI Designer"
+          bio="Combining CSS Modules, inline styles, and Tailwind."
+          bgColor="#064e3b"
+          accentColor="#34d399"
+        />
 
         <Card
           bgColor="#0070f3"
