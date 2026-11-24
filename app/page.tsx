@@ -4,10 +4,11 @@ import Navigation from "./components/Navigation";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import Card from "./components/Card";
+import AppLayout from "./components/AppLayout";
 
 export default function Home() {
   return (
-    <div>
+    <AppLayout>
       <Navigation />
       <main className={styles.container}>
         <Title />
@@ -32,6 +33,6 @@ export default function Home() {
           description="Styled dynamically with a green background."
         />
       </main>
-    </div>
+    </AppLayout>
   );
 }
