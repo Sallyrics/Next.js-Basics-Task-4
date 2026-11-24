@@ -3,6 +3,7 @@ import styles from "./home/home.module.css";
 import Navigation from "./components/Navigation";
 import Title from "./components/Title";
 import Button from "./components/Button";
+import Card from "./components/Card";
 
 export default function Home() {
   return (
@@ -19,6 +20,17 @@ export default function Home() {
           Go to About Page
         </Link>
         <Button />
+
+        <Card
+          bgColor="#0070f3"
+          title="Blue Card"
+          description="Styled dynamically with a blue background."
+        />
+        <Card
+          bgColor="#10b981"
+          title="Green Card"
+          description="Styled dynamically with a green background."
+        />
       </main>
     </div>
   );
