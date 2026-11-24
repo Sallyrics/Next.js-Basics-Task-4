@@ -5,12 +5,14 @@ import Title from "./components/Title";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import AppLayout from "./components/AppLayout";
+import Alert from "./components/Alert";
 
 export default function Home() {
   return (
     <AppLayout>
       <Navigation />
       <main className={styles.container}>
+        <Alert />
         <Title />
         <h1 className={styles.title}>Sally&apos;s Next.js Portfolio</h1>
         <p className={styles.description}>
