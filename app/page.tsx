@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./home/home.module.css";
 import Navigation from "./components/Navigation";
 import Title from "./components/Title";
+import Button from "./components/Button";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Link href="/about" className={styles.link}>
           Go to About Page
         </Link>
+        <Button />
       </main>
     </div>
   );
