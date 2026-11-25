@@ -1,4 +1,6 @@
 export default async function ProfilePage() {
+  console.log('Rendering profile on server');
+
   const response = await fetch('http://localhost:3000/api/users/1', {
     cache: 'no-store',
   });
