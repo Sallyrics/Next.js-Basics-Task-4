@@ -1,15 +1,15 @@
-'use cache';
-
 export default async function BlogPage() {
-  const response = await fetch('http://localhost:3000/api/users');
-  const posts = await response.json();
+  const posts = [
+    { id: 1, title: 'Sally' },
+    { id: 2, title: 'David' },
+  ];
 
   return (
     <main>
       <h1>Blog Posts</h1>
       <ul>
         {posts.map((post) => (
-          <li key={post.id}>{post.name}</li>
+          <li key={post.id}>{post.title}</li>
         ))}
       </ul>
     </main>
