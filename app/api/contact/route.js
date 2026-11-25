@@ -1,23 +1,29 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
-  const body = await request.json();
-  const { name, message } = body;
+  try {
+    const body = await request.json();
+    const { name, message } = body;
 
-  // Optional basic validation
-  if (!name || !message) {
+    if (!name || !name.trim() || !message || !message.trim()) {
+      return NextResponse.json(
+        { error: "Both 'name' and 'message' fields are required." },
+        { status: 400 }
+      );
+    }
+
     return NextResponse.json(
-      { success: false, error: "Name and message are required." },
+      {
+        success: true,
+        message: `Thank you, ${name.trim()}! Your message has been received.`,
+        data: { name: name.trim(), message: message.trim() }
+      },
+      { status: 200 }
+    );
+  } catch (err) {
+    return NextResponse.json(
+      { error: "Invalid JSON request body." },
       { status: 400 }
     );
   }
-
-  return NextResponse.json(
-    {
-      success: true,
-      message: `Thank you, ${name}! Your message has been received.`,
-      data: { name, message }
-    },
-    { status: 200 }
-  );
 }
